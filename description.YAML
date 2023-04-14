@@ -1,0 +1,79 @@
+swagger: '2.0'
+info:
+  title: Mon API RESTful
+  version: 1.0.0
+basePath: /api/v1
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /users:
+    get:
+      summary: Récupère la liste des utilisateurs
+      responses:
+        '200':
+          description: Succès
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+    post:
+      summary: Crée un nouvel utilisateur
+      parameters:
+        - name: user
+          in: body
+          description: Utilisateur à créer
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '201':
+          description: Créé avec succès
+          schema:
+            $ref: '#/definitions/User'
+  /users/{id}:
+    get:
+      summary: Récupère un utilisateur par ID
+      parameters:
+        - name: id
+          in: path
+          description: ID de l'utilisateur
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: Succès
+          schema:
+            $ref: '#/definitions/User'
+    put:
+      summary: Met à jour un utilisateur existant
+      parameters:
+        - name: id
+          in: path
+          description: ID de l'utilisateur
+          required: true
+          type: integer
+        - name: user
+          in: body
+          description: Utilisateur mis à jour
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Mis à jour avec succès
+          schema:
+            $ref: '#/definitions/User'
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      email:
+        type: string

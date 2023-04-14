@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Traduction de texte",
+    "description": "API pour traduire un texte de l'anglais à l'allemand",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/translate": {
+      "post": {
+        "summary": "Traduire un texte",
+        "description": "Cette méthode permet de traduire un texte de l'anglais à l'allemand.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Traduction réussie",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "translatedText": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
