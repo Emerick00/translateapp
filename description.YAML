@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  title: Mon API RESTful
+  title: Mein API RESTful
   version: 1.0.0
 basePath: /api/v1
 schemes:
@@ -12,59 +12,59 @@ produces:
 paths:
   /users:
     get:
-      summary: Récupère la liste des utilisateurs
+      summary: Ruft die Liste der Benutzer ab
       responses:
         '200':
-          description: Succès
+          description: Erfolg
           schema:
             type: array
             items:
               $ref: '#/definitions/User'
     post:
-      summary: Crée un nouvel utilisateur
+      summary: Username erstellen
       parameters:
         - name: user
           in: body
-          description: Utilisateur à créer
+          description: Username erstellen
           required: true
           schema:
             $ref: '#/definitions/User'
       responses:
         '201':
-          description: Créé avec succès
+          description: erfolgreich erstellt
           schema:
             $ref: '#/definitions/User'
   /users/{id}:
     get:
-      summary: Récupère un utilisateur par ID
+      summary: Ruft die Liste der Benutzer ab
       parameters:
         - name: id
           in: path
-          description: ID de l'utilisateur
+          description: ID von User
           required: true
           type: integer
       responses:
         '200':
-          description: Succès
+          description: Erfolg
           schema:
             $ref: '#/definitions/User'
     put:
-      summary: Met à jour un utilisateur existant
+      summary: Aktualisieren Sie einen vorhandenen Benutzer
       parameters:
         - name: id
           in: path
-          description: ID de l'utilisateur
+          description: Benutzer-ID
           required: true
           type: integer
         - name: user
           in: body
-          description: Utilisateur mis à jour
+          description: Benutzer aktualisiert
           required: true
           schema:
             $ref: '#/definitions/User'
       responses:
         '200':
-          description: Mis à jour avec succès
+          description: Aktualisierung erfolgreich
           schema:
             $ref: '#/definitions/User'
 definitions:

@@ -1,27 +1,28 @@
-## Traducteur de texte en utilisant React
+## Textübersetzer mit React
 
-Cette application permet de traduire du texte de l'anglais à l'allemand en utilisant l'API de traduction de Google. Elle utilise React pour créer une interface utilisateur dynamique.
+Diese Anwendung ermöglicht die Übersetzung von Texten von Englisch nach Deutsch unter Verwendung der Google Translate API. Sie verwendet React, um eine dynamische Benutzeroberfläche zu erstellen.
 
-## Technologies utilisées
+## Verwendete Technologien
 
-Cette application a été développée en utilisant les technologies suivantes :
+Diese Anwendung wurde unter Verwendung der folgenden Technologien entwickelt:
 
-- React : une bibliothèque JavaScript pour la création d'interfaces utilisateur
-- Axios : une bibliothèque JavaScript pour effectuer des requêtes HTTP
-- string-similarity : une bibliothèque JavaScript pour calculer le score de similarité entre deux chaînes de caractères
-- diff : une bibliothèque JavaScript pour trouver les différences entre deux textes
+- React: Eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen
+- Axios: Eine JavaScript-Bibliothek zur Durchführung von HTTP-Anfragen
+- string-similarity: Eine JavaScript-Bibliothek zur Berechnung der Ähnlichkeit zwischen zwei Zeichenketten
+- diff: Eine JavaScript-Bibliothek zum Auffinden von Unterschieden zwischen zwei Texten
 
-## Comment utiliser l'application
+## Verwendung der Anwendung
 
-Pour utiliser l'application, il suffit de suivre les étapes suivantes :
+Um die Anwendung zu verwenden, befolgen Sie bitte die folgenden Schritte:
 
-1. Cloner le dépôt de l'application : `git clone https://github.com/your_username/translate-app.git`
-2. Installer les dépendances : `npm install`
-3. Créer un fichier `.env` à la racine du projet et ajouter votre clé d'API Google Translate : `REACT_APP_API_KEY=your_api_key`
-4. Démarrer l'application : `npm start`
+1. Klone das Repository der Anwendung:`git clone https://github.com/Emerick00/translateapp`
+2. Installiere die Abhängigkeiten: `npm install`
+3. Erstelle eine `.env`-Datei im Stammverzeichnis des Projekts und füge deinen Google Translate API-Schlüssel hinzu: `REACT_APP_API_KEY=your_api_key`
+4. Starte die Anwendung: `npm start` 
+# Achtung: NodeJs muss in Computer installiert sein, damit es funtioniert
 
-- Une fois l'application démarrée, vous pouvez saisir du texte en anglais dans la zone de texte et cliquer sur le bouton "Traduire". Le texte traduit en allemand sera affiché ainsi que le score de similarité entre le texte original et le texte traduit. Si les deux textes diffèrent, les mots problématiques seront également affichés.
+- Nachdem die Anwendung gestartet wurde, kannst du englischen Text in das Textfeld eingeben und auf die Schaltfläche "Übersetzen" klicken. Der übersetzte Text ins Deutsche wird angezeigt, sowie die Ähnlichkeit zwischen dem ursprünglichen Text und dem übersetzten Text. Wenn sich die beiden Texte unterscheiden, werden auch problematische Wörter angezeigt.
 
-## Auteur
+## Autor
 
-Cette application a été développée par [votre nom].
+Diese Apps wurde von Gruppe 6 entwickelt.
