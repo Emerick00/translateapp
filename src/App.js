@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Translate from './composant/Translate';
+import MyTranslate from './composant/MyTranslate';
 
 function App() {
   return (
     <div>
-      <Translate />
+      <MyTranslate />
     </div>
   );
 }
